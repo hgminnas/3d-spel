@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://vkqu0b8w5myj"]
+
+[ext_resource type="MeshLibrary" uid="uid://d0kh00ywmpydi" path="res://assets/A sci fi/sci-fi-like Asset/scenes/GridMaps/Walls.tres" id="1_h0m5t"]
+[ext_resource type="Script" uid="uid://dsq1tvs4enmui" path="res://Map/1_st_room.gd" id="1_tt5a7"]
+[ext_resource type="MeshLibrary" uid="uid://vxyw47ulyu6b" path="res://assets/A sci fi/sci-fi-like Asset/scenes/GridMaps/Rooms.tres" id="2_oi0rx"]
+[ext_resource type="PackedScene" uid="uid://brr7av8bojutp" path="res://assets/A sci fi/sci-fi-like Asset/scenes/Panels/panel_card_slider.tscn" id="3_oi0rx"]
+[ext_resource type="PackedScene" uid="uid://bvtdna08dhf1u" path="res://Details/Pickup/triangle_pickup.tscn" id="4_fl76v"]
+[ext_resource type="PackedScene" uid="uid://bvw50h4l7ybqo" path="res://Details/Key Card/key_card.tscn" id="4_mie2w"]
+[ext_resource type="PackedScene" uid="uid://dokofin851w68" path="res://Details/Pickup/rectangle_pickup.tscn" id="5_ckrhi"]
+[ext_resource type="PackedScene" uid="uid://b3c7jwrwson8p" path="res://Details/Pickup/cont_box_pickup.tscn" id="6_h2dxu"]
+[ext_resource type="PackedScene" uid="uid://ypo0wxpbqjxv" path="res://Details/Pickup/cont_barrel_pickup.tscn" id="7_tt5a7"]
+[ext_resource type="PackedScene" uid="uid://cbvo02v832lpb" path="res://assets/A sci fi/sci-fi-like Asset/scenes/Panels/panel_light.tscn" id="8_mie2w"]
+[ext_resource type="PackedScene" uid="uid://c8gs4skr77gsh" path="res://Player/player.tscn" id="9_ckrhi"]
+[ext_resource type="PackedScene" uid="uid://cqxp34fwb5ucn" path="res://assets/A sci fi/sci-fi-like Asset/scenes/Panels/panel_light_2.tscn" id="9_h2dxu"]
+[ext_resource type="PackedScene" uid="uid://donwqj0xol8yg" path="res://assets/A sci fi/sci-fi-like Asset/scenes/Doors/door_frame_card.tscn" id="13_cy8mi"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cy8mi"]
+
+[node name="1_st room" type="Node3D" unique_id=1896714428]
+script = ExtResource("1_tt5a7")
+
+[node name="Player" parent="." unique_id=1612772408 instance=ExtResource("9_ckrhi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.046166, -1.8167658)
+
+[node name="Panel_CardSlider" parent="." unique_id=68030248 instance=ExtResource("3_oi0rx")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2.6494908, 3.269792, -0.19110845)
+
+[node name="Door_Fram" parent="." unique_id=2002114312 instance=ExtResource("13_cy8mi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.1110995, -0.043627262)
+
+[node name="KeyCard" parent="." unique_id=1932828222 instance=ExtResource("4_mie2w")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1, 3.6441717, -2.5494056)
+visible = false
+
+[node name="A sci fi" type="Node3D" parent="." unique_id=1426095161]
+
+[node name="Walls" type="GridMap" parent="A sci fi" unique_id=1087702967]
+mesh_library = ExtResource("1_h0m5t")
+data = {
+"cells": PackedInt32Array(65535, 65534, 655382, 65535, 65531, 12)
+}
+
+[node name="Rooms" type="GridMap" parent="A sci fi" unique_id=739685048]
+mesh_library = ExtResource("2_oi0rx")
+data = {
+"cells": PackedInt32Array(65535, 65534, 1441792, 65535, 65531, 1441792)
+}
+
+[node name="Pickups" type="Node3D" parent="." unique_id=484821585]
+
+[node name="triangle_pickup" parent="Pickups" unique_id=170006300 instance=ExtResource("4_fl76v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02994299, 3.035317, -7.528635)
+
+[node name="rectangle_pickup" parent="Pickups" unique_id=1772605930 instance=ExtResource("5_ckrhi")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.1970954, 2.8373795, -7.3224773)
+
+[node name="Cont_Box_Pickup" parent="Pickups" unique_id=788858402 instance=ExtResource("6_h2dxu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2634943, 3.094009, -7.2639294)
+
+[node name="Cont_Barrel_Pickup" parent="Pickups" unique_id=2004240638 instance=ExtResource("7_tt5a7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7409165, 2.3171487, -7.992486)
+
+[node name="Pickups2" type="Node3D" parent="." unique_id=1285011070]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.088245)
+
+[node name="triangle_pickup" parent="Pickups2" unique_id=185382625 instance=ExtResource("4_fl76v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02994299, 3.035317, -7.528635)
+
+[node name="rectangle_pickup" parent="Pickups2" unique_id=1763272639 instance=ExtResource("5_ckrhi")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.1970954, 2.8373795, -7.3224773)
+
+[node name="Cont_Box_Pickup" parent="Pickups2" unique_id=1349060644 instance=ExtResource("6_h2dxu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2634943, 3.094009, -7.2639294)
+
+[node name="Cont_Barrel_Pickup" parent="Pickups2" unique_id=1192720048 instance=ExtResource("7_tt5a7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7409165, 2.3171487, -7.992486)
+
+[node name="Panels" type="Node3D" parent="." unique_id=1125752595]
+
+[node name="Panel_Light" parent="Panels" unique_id=850316536 instance=ExtResource("8_mie2w")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -2.331299, 1.1519666, -10.123257)
+
+[node name="Panel_Light_2" parent="Panels" unique_id=1760650474 instance=ExtResource("9_h2dxu")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.37051725, 1.2178936, -10.118811)
+
+[node name="Clues" type="Node3D" parent="." unique_id=1007871232]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Clues" unique_id=2134425641]
+mesh = SubResource("PlaneMesh_cy8mi")
+
+[connection signal="tower_state" from="Panels/Panel_Light" to="." method="_on_panel_light_tower_state"]
+[connection signal="tower_state_2" from="Panels/Panel_Light_2" to="." method="_on_panel_light_2_tower_state_2"]

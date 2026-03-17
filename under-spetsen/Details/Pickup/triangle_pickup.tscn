@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bvtdna08dhf1u"]
+
+[ext_resource type="Material" uid="uid://bbvmhlpig6wnq" path="res://assets/A sci fi/sci-fi-like Asset/PropMaterials/Chest_Mat.tres" id="1_y6i8p"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_8aiec"]
+material = ExtResource("1_y6i8p")
+
+[node name="triangle_pickup" type="RigidBody3D" unique_id=170006300 groups=["pickup", "triangle"]]
+collision_layer = 3
+lock_rotation = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=178825447]
+mesh = SubResource("PrismMesh_8aiec")
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="." unique_id=1983834711]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0016548634)
+polygon = PackedVector2Array(0.50511336, -0.49909553, -0.49318305, -0.49358007, 0.0032074272, 0.49368525)

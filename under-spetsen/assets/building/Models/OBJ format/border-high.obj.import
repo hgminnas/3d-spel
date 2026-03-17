@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://l5suqqnrwyne"
+path="res://.godot/imported/border-high.obj-f74036df9a48b08c2f10b33bf0532152.mesh"
+
+[deps]
+
+files=["res://.godot/imported/border-high.obj-f74036df9a48b08c2f10b33bf0532152.mesh"]
+
+source_file="res://assets/building/Models/OBJ format/border-high.obj"
+dest_files=["res://.godot/imported/border-high.obj-f74036df9a48b08c2f10b33bf0532152.mesh", "res://.godot/imported/border-high.obj-f74036df9a48b08c2f10b33bf0532152.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://twt85kqqv8dn"]
+
+[ext_resource type="PackedScene" uid="uid://3fjrei2e1v2b" path="res://assets/dungeon3/DungeonTiles/scenes/Level/Test.tscn" id="1_kmgeg"]
+[ext_resource type="PackedScene" uid="uid://c8gs4skr77gsh" path="res://Player/player.tscn" id="2_3d36u"]
+
+[node name="Node3D" unique_id=280805465 instance=ExtResource("1_kmgeg")]
+
+[node name="Player" parent="." index="4" unique_id=1612772408 instance=ExtResource("2_3d36u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7093353, 0)

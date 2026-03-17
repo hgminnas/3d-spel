@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://cbvo02v832lpb"]
+
+[ext_resource type="ArrayMesh" uid="uid://dmgmslysww4q6" path="res://Details/Panel Light/Mesh/Panel_Light_Mesh.tres" id="1_4ofnu"]
+[ext_resource type="Script" uid="uid://b5eu1o527q74y" path="res://assets/A sci fi/sci-fi-like Asset/scenes/Panels/panel_light.gd" id="1_8h5yi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8h5yi"]
+size = Vector3(1.6906738, 1.7049866, 0.28668213)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kbcof"]
+size = Vector3(1.5669937, 1.532959, 0.340271)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j2d2s"]
+size = Vector3(1.676651, 1.6976776, 0.7069092)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lidvl"]
+size = Vector3(1.671051, 1.6447754, 0.43240356)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ngbsq"]
+size = Vector3(1.6447754, 1.6779785, 0.56409264)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1g2id"]
+size = Vector3(1.6309204, 1.6525879, 0.55055237)
+
+[node name="Panel_Light" type="RigidBody3D" unique_id=1760650474]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+freeze = true
+script = ExtResource("1_8h5yi")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1255064269]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0.502488)
+light_energy = 3.0
+light_indirect_energy = 3.0
+light_volumetric_fog_energy = 1.5
+shadow_enabled = true
+shadow_normal_bias = 3.0
+shadow_transmittance_bias = 1.0
+distance_fade_enabled = true
+spot_range = 12.0
+spot_attenuation = 1.03526
+spot_angle = 80.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=906578889]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010620117, -0.02015686, 0.15438843)
+shape = SubResource("BoxShape3D_8h5yi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1338795970]
+instance_shader_parameters/albedo = Color(0, 0, 0, 1)
+instance_shader_parameters/emission = Color(1, 1, 1, 0.56078434)
+instance_shader_parameters/emission_energy = 20.0
+mesh = ExtResource("1_4ofnu")
+
+[node name="ColorArea" type="Area3D" parent="." unique_id=208178081]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ColorArea" unique_id=1751510848]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0166893, -0.028198242, 0.18130493)
+shape = SubResource("BoxShape3D_kbcof")
+
+[node name="Order" type="Node3D" parent="." unique_id=983530699]
+
+[node name="1_Cube" type="Area3D" parent="Order" unique_id=204191774]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Order/1_Cube" unique_id=469692096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.918213e-05, 0.00012970297, 0.50775146)
+shape = SubResource("BoxShape3D_j2d2s")
+
+[node name="2_Triangle" type="Area3D" parent="Order" unique_id=995831839]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Order/2_Triangle" unique_id=1650906783]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008651733, 0.0045166016, 1.5565948)
+shape = SubResource("BoxShape3D_lidvl")
+
+[node name="3_Rectangle" type="Area3D" parent="Order" unique_id=1018714921]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Order/3_Rectangle" unique_id=1291283972]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0064697266, 0.005249023, 2.5902033)
+shape = SubResource("BoxShape3D_ngbsq")
+
+[node name="4_Barrel" type="Area3D" parent="Order" unique_id=1864538445]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Order/4_Barrel" unique_id=101476850]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0010681152, 0.0032958984, 3.8589096)
+shape = SubResource("BoxShape3D_1g2id")
+
+[connection signal="body_entered" from="Order/1_Cube" to="." method="_on__cube_body_entered"]
+[connection signal="body_exited" from="Order/1_Cube" to="." method="_on__cube_body_exited"]
+[connection signal="body_entered" from="Order/2_Triangle" to="." method="_on__triangle_body_entered"]
+[connection signal="body_exited" from="Order/2_Triangle" to="." method="_on__triangle_body_exited"]
+[connection signal="body_entered" from="Order/3_Rectangle" to="." method="_on__rectangle_body_entered"]
+[connection signal="body_exited" from="Order/3_Rectangle" to="." method="_on__rectangle_body_exited"]
+[connection signal="body_entered" from="Order/4_Barrel" to="." method="_on__barrel_body_entered"]
+[connection signal="body_exited" from="Order/4_Barrel" to="." method="_on__barrel_body_exited"]

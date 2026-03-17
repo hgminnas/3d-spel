@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dgin3u3bomaaw"
+path="res://.godot/imported/freezers-standing.obj-a49e88c5def1388d69a4d1c3d9bd9829.mesh"
+
+[deps]
+
+files=["res://.godot/imported/freezers-standing.obj-a49e88c5def1388d69a4d1c3d9bd9829.mesh"]
+
+source_file="res://assets/food/Models/OBJ format/freezers-standing.obj"
+dest_files=["res://.godot/imported/freezers-standing.obj-a49e88c5def1388d69a4d1c3d9bd9829.mesh", "res://.godot/imported/freezers-standing.obj-a49e88c5def1388d69a4d1c3d9bd9829.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

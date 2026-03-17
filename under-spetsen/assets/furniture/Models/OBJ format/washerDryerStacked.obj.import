@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b6weimfvt3gu5"
+path="res://.godot/imported/washerDryerStacked.obj-4f2882acf88d0f9a384b07834e598bee.mesh"
+
+[deps]
+
+files=["res://.godot/imported/washerDryerStacked.obj-4f2882acf88d0f9a384b07834e598bee.mesh"]
+
+source_file="res://assets/furniture/Models/OBJ format/washerDryerStacked.obj"
+dest_files=["res://.godot/imported/washerDryerStacked.obj-4f2882acf88d0f9a384b07834e598bee.mesh", "res://.godot/imported/washerDryerStacked.obj-4f2882acf88d0f9a384b07834e598bee.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

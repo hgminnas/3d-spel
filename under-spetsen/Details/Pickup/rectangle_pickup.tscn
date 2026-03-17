@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dokofin851w68"]
+
+[ext_resource type="Material" uid="uid://bpbw32mvxrwsu" path="res://assets/dungeon3/DungeonTiles/material/DungeonBrickFloor_mat.tres" id="1_my52y"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mipvv"]
+material = ExtResource("1_my52y")
+size = Vector3(1, 2, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fv80d"]
+size = Vector3(2, 1, 1)
+
+[node name="rectangle_pickup" type="RigidBody3D" unique_id=1772605930 groups=["pickup", "rectangle"]]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+collision_layer = 3
+lock_rotation = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1509808738]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_mipvv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1794017654]
+shape = SubResource("BoxShape3D_fv80d")

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://jn0f1jqjb5w2"
+path="res://.godot/imported/stairs-sides-short.obj-5e6f3f95be217e70a41035f96be2e4ec.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stairs-sides-short.obj-5e6f3f95be217e70a41035f96be2e4ec.mesh"]
+
+source_file="res://assets/building/Models/OBJ format/stairs-sides-short.obj"
+dest_files=["res://.godot/imported/stairs-sides-short.obj-5e6f3f95be217e70a41035f96be2e4ec.mesh", "res://.godot/imported/stairs-sides-short.obj-5e6f3f95be217e70a41035f96be2e4ec.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

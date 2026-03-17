@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bcrwo3fmtlt75"
+path="res://.godot/imported/gutter-vertical-wall.obj-e9e8bb91ea950cf394d272075bdad598.mesh"
+
+[deps]
+
+files=["res://.godot/imported/gutter-vertical-wall.obj-e9e8bb91ea950cf394d272075bdad598.mesh"]
+
+source_file="res://assets/building/Models/OBJ format/gutter-vertical-wall.obj"
+dest_files=["res://.godot/imported/gutter-vertical-wall.obj-e9e8bb91ea950cf394d272075bdad598.mesh", "res://.godot/imported/gutter-vertical-wall.obj-e9e8bb91ea950cf394d272075bdad598.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

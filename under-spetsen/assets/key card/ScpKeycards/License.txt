@@ -1,0 +1,5 @@
+The font used for all text on the keycard textures is "Piximisa" by Grandoplex Project from fontzilla.com: https://www.fontzillion.com/fonts/grandoplex-project/piximisa. Licensed as "100% free" and can be used for personal and commercial uses.
+
+
+The mesh and textures were created by me (Destroyanad) and are licensed under CC-BY-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0/
+The high-res SCP logo is from "Dr. Mackenzie's Sketchbook" by Aelanna, from the SCP Wiki. Source: https://scpwiki.com/dr-mackenzie-s-sketchbook Licensed under CC-BY-SA 3.0: https://creativecommons.org/licenses/by-sa/3.0/

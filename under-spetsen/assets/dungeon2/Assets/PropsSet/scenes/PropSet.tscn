@@ -1,0 +1,173 @@
+[gd_scene load_steps=41 format=2]
+
+[ext_resource path="res://Assets/PropsSet/scenes/Weapons/Weapon_Axe.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/PropsSet/scenes/Weapons/Weapon_Gladius.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/PropsSet/scenes/Weapons/Weapon_SledgeHammer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/PropsSet/scenes/Weapons/Weapon_Mace.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/PropsSet/scenes/Weapons/Weapon_Broom.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/PropsSet/scenes/Weapons/Weapon_ShortSword.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/PropsSet/scenes/Weapons/Weapon_Sword.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/PropsSet/scenes/Weapons/Weapon_BattleAxe.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/PropsSet/scenes/Weapons/Weapon_Spear.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/PropsSet/scenes/Weapons/Weapon_PickAxe.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/PropsSet/scenes/Pillars/Statue_Base.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/PropsSet/scenes/Props/Prop_Crate.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/PropsSet/scenes/Pillars/Pillar_Pillars_3.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/PropsSet/scenes/Pillars/Pillar_Pillars_1.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Assets/PropsSet/scenes/Props/Prop_Candle.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Assets/PropsSet/scenes/Props/Prop_Brazier_2.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Assets/PropsSet/scenes/Pillars/Pillar_Pillars_Big_1.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Assets/PropsSet/scenes/Props/Prop_Shackles_1.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Assets/PropsSet/scenes/Pillars/Pillar_Fountain_Spout_2.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Assets/PropsSet/scenes/Props/Prop_Chest2.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Assets/PropsSet/scenes/Props/Prop_CandleHolder.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Assets/PropsSet/scenes/Props/Prop_Shackles_2.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Assets/PropsSet/scenes/Props/Prop_WeaponRack_2.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Assets/PropsSet/scenes/Pillars/Pillar_Fountain_1.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Assets/PropsSet/scenes/Pillars/Pillar_Pillars_2.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Assets/PropsSet/scenes/Pillars/Pillar_Pillar_Base.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Assets/PropsSet/scenes/Pillars/Pillar_Fountain_2.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Assets/PropsSet/scenes/Pillars/Pillar_Pillars_Big_2.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Assets/PropsSet/scenes/Pillars/Pillar_Fountain_Spout_1.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Assets/PropsSet/scenes/Props/Prop_Plank.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Assets/PropsSet/scenes/Props/Prop_Chest1.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Assets/PropsSet/scenes/Props/Prop_Barrel.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Assets/PropsSet/scenes/Props/Prop_WeaponRack.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Assets/PropsSet/scenes/Props/Prop_CandleStick.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Assets/PropsSet/scenes/Props/Prop_Torch.tscn" type="PackedScene" id=35]
+[ext_resource path="res://Assets/PropsSet/scenes/Pillars/Pillar_Pillars_4.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Assets/PropsSet/scenes/Props/Prop_Brazier_1.tscn" type="PackedScene" id=37]
+[ext_resource path="res://Assets/player/Player.tscn" type="PackedScene" id=38]
+
+[sub_resource type="PlaneMesh" id=1]
+size = Vector2( 50, 50 )
+
+[sub_resource type="ConcavePolygonShape" id=2]
+data = PoolVector3Array( 25, 0, 25, -25, 0, 25, 25, 0, -25, -25, 0, 25, -25, 0, -25, 25, 0, -25 )
+
+[node name="PropSet" type="Spatial"]
+
+[node name="Pillar_Pillars_4" parent="." instance=ExtResource( 36 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.12076, 0, -0.688047 )
+
+[node name="Pillar_Fountain_1" parent="." instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2007, 2.38419e-07, -1.16474 )
+
+[node name="Statue_Base" parent="." instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.96915, 1.34118, 0.136974 )
+
+[node name="Pillar_Pillars_2" parent="." instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.88474, 0, -0.565863 )
+
+[node name="Pillar_Pillars_1" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87084, 0, -0.47615 )
+
+[node name="Pillar_Pillars_3" parent="." instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.01192, 4.76837e-07, -0.694297 )
+
+[node name="Pillar_Pillar_Base" parent="." instance=ExtResource( 26 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.33928, 4.76837e-07, -2.6512 )
+
+[node name="Pillar_Fountain_2" parent="." instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.40329, 0, -2.85115 )
+
+[node name="Pillar_Pillars_Big_2" parent="." instance=ExtResource( 28 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.06705, 0, -1.98172 )
+
+[node name="Pillar_Pillars_Big_1" parent="." instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.70817, 0, -2.0531 )
+
+[node name="Pillar_Fountain_Spout_1" parent="." instance=ExtResource( 29 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.06068, 0, -1.56241 )
+
+[node name="Pillar_Fountain_Spout_2" parent="." instance=ExtResource( 19 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.81925, 0, -1.39564 )
+
+[node name="Prop_Crate" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.802895, 0.79969, -2.473 )
+
+[node name="Prop_Plank" parent="." instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0744, 1.39683, 0.06301 )
+
+[node name="Prop_Chest1" parent="." instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.63023, 0.307671, 0.963787 )
+
+[node name="Prop_Chest2" parent="." instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.89478, 0.391635, 0.870991 )
+
+[node name="Prop_Barrel" parent="." instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.31877, 0.992221, -5.41874 )
+
+[node name="Prop_WeaponRack" parent="." instance=ExtResource( 33 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.13968, 0.659394, 0.0128376 )
+
+[node name="Prop_Candle" parent="." instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39877, 0, 0.847118 )
+
+[node name="Prop_Torch" parent="." instance=ExtResource( 35 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.67968, 1.29101, -0.25975 )
+
+[node name="Prop_Brazier_2" parent="." instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.41479, 0, 1.48799 )
+
+[node name="Prop_Shackles_1" parent="." instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.99317, 0, -0.017946 )
+
+[node name="Prop_CandleStick" parent="." instance=ExtResource( 34 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.77525, 0.0873465, 0.84613 )
+
+[node name="Prop_CandleHolder" parent="." instance=ExtResource( 21 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.31891, 0.0859395, 0.309533 )
+
+[node name="Prop_Shackles_2" parent="." instance=ExtResource( 22 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.90111, 0.17354, 0.212676 )
+
+[node name="Prop_WeaponRack_2" parent="." instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.18413, 0.659394, -0.836769 )
+
+[node name="Prop_Brazier_1" parent="." instance=ExtResource( 37 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.10114, 2.38419e-07, -2.62219 )
+
+[node name="Prop_Brazier_3" parent="." instance=ExtResource( 37 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6664, 0, -1.49694 )
+
+[node name="Weapon_Axe" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.991695, 0 )
+
+[node name="Weapon_BattleAxe" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.63219, 0.991695, 0.336845 )
+
+[node name="Weapon_Gladius" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.537291, 0.991695, -0.126721 )
+
+[node name="Weapon_PickAxe" parent="." instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.67617, 0.991695, -0.106372 )
+
+[node name="Weapon_ShortSword" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.752306, 0.991695, -0.495824 )
+
+[node name="Weapon_SledgeHammer" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.492782, 0.991695, 0.319843 )
+
+[node name="Weapon_Sword" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.299053, 0.991695, -0.408173 )
+
+[node name="Weapon_Spear" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26817, 0.991695, -0.153911 )
+
+[node name="Weapon_Mace" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.223229, 0.991695, -0.345478 )
+
+[node name="Weapon_Broom" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0835151, 0.991695, -0.217249 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 38 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.87077, 0, 2.72607 )

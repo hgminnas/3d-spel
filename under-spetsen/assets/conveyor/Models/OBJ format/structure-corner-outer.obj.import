@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://duqjcs44041ql"
+path="res://.godot/imported/structure-corner-outer.obj-700b35dea4e5b98c4d5c7999005047fe.mesh"
+
+[deps]
+
+files=["res://.godot/imported/structure-corner-outer.obj-700b35dea4e5b98c4d5c7999005047fe.mesh"]
+
+source_file="res://assets/conveyor/Models/OBJ format/structure-corner-outer.obj"
+dest_files=["res://.godot/imported/structure-corner-outer.obj-700b35dea4e5b98c4d5c7999005047fe.mesh", "res://.godot/imported/structure-corner-outer.obj-700b35dea4e5b98c4d5c7999005047fe.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

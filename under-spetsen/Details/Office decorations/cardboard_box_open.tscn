@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dfj6h6448a7mo"]
+
+[ext_resource type="PackedScene" uid="uid://2ny81iyv6f7v" path="res://assets/furniture/Models/DAE format/cardboardBoxOpen.dae" id="1_5if3h"]
+
+[node name="cardboardBoxOpen" unique_id=793057160 instance=ExtResource("1_5if3h")]

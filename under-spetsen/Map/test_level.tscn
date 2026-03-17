@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://d3mkcvfo2bqxu"]
+
+[ext_resource type="PackedScene" uid="uid://c8gs4skr77gsh" path="res://Player/player.tscn" id="1_ugamg"]
+[ext_resource type="PackedScene" uid="uid://y50bm0he47tr" path="res://assets/dungeon/Models/GLB format/template-wall.glb" id="2_u4nxo"]
+[ext_resource type="MeshLibrary" uid="uid://ctt52t6ypk3ef" path="res://assets/dungeon3/DungeonTiles/scenes/MeshLibrary/rooms.tres" id="3_ea2dn"]
+[ext_resource type="MeshLibrary" uid="uid://1c2k4d2qgfv4" path="res://assets/dungeon3/DungeonTiles/scenes/MeshLibrary/Walls.tres" id="4_qqgcv"]
+[ext_resource type="MeshLibrary" uid="uid://vcg31mrtc2pk" path="res://assets/dungeon3/DungeonTiles/scenes/MeshLibrary/Platforms.tres" id="5_pu82k"]
+[ext_resource type="MeshLibrary" uid="uid://dh3twsgivnq63" path="res://assets/dungeon3/DungeonTiles/scenes/MeshLibrary/Pillars.tres" id="6_gonat"]
+[ext_resource type="MeshLibrary" uid="uid://cja1xmiipdihy" path="res://assets/dungeon3/DungeonTiles/scenes/MeshLibrary/decors.tres" id="7_8j1rg"]
+[ext_resource type="MeshLibrary" uid="uid://b47qjoxgktcgu" path="res://assets/dungeon2/Assets/DungeonTiles/Scenes/MeshLib/Dungeon_FreeTiles_MeshLib.tres" id="8_ea2dn"]
+[ext_resource type="PackedScene" uid="uid://ckorsnolyaehh" path="res://assets/dungeon/Models/GLB format/template-floor-detail.glb" id="9_qqgcv"]
+[ext_resource type="PackedScene" uid="uid://7vy6ve1qn2fu" path="res://Details/Pickup/test_pickup.tscn" id="10_pu82k"]
+[ext_resource type="PackedScene" uid="uid://ypo0wxpbqjxv" path="res://Details/Pickup/cont_barrel_pickup.tscn" id="11_gonat"]
+[ext_resource type="PackedScene" uid="uid://b3c7jwrwson8p" path="res://Details/Pickup/cont_box_pickup.tscn" id="12_8j1rg"]
+[ext_resource type="PackedScene" uid="uid://bvtdna08dhf1u" path="res://Details/Pickup/triangle_pickup.tscn" id="13_tpiaa"]
+[ext_resource type="PackedScene" uid="uid://dokofin851w68" path="res://Details/Pickup/rectangle_pickup.tscn" id="14_irc2a"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ugamg"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_6iwoi"]
+sky_material = SubResource("ProceduralSkyMaterial_ugamg")
+
+[sub_resource type="Environment" id="Environment_o4pov"]
+background_mode = 2
+sky = SubResource("Sky_6iwoi")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6iwoi"]
+size = Vector3(20, 2, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o4pov"]
+albedo_color = Color(0.7058824, 1, 0.5568628, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_js5x8"]
+material = SubResource("StandardMaterial3D_o4pov")
+size = Vector3(20, 2, 20)
+
+[node name="TestLevel" type="Node3D" unique_id=540758944]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1177035858]
+environment = SubResource("Environment_o4pov")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=933876655]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=320524831]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0075683594, 0, 0)
+shape = SubResource("BoxShape3D_6iwoi")
+debug_color = Color(0.8118974, 0.36189276, 0.51549387, 0.41960785)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=979695718]
+mesh = SubResource("BoxMesh_js5x8")
+
+[node name="Player" parent="." unique_id=1612772408 instance=ExtResource("1_ugamg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1529404820]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 17, 0)
+light_color = Color(0.98184294, 0.9492304, 0, 1)
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1117592250]
+
+[node name="template-wall2" parent="Node3D" unique_id=713625022 instance=ExtResource("2_u4nxo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+
+[node name="Dungeon3" type="Node3D" parent="." unique_id=1576921146]
+
+[node name="GridMap" type="GridMap" parent="Dungeon3" unique_id=1411334644]
+mesh_library = ExtResource("3_ea2dn")
+data = {
+"cells": PackedInt32Array(3, 65534, 106)
+}
+
+[node name="GridMap2" type="GridMap" parent="Dungeon3" unique_id=1471240989]
+mesh_library = ExtResource("4_qqgcv")
+
+[node name="GridMap3" type="GridMap" parent="Dungeon3" unique_id=1438590757]
+mesh_library = ExtResource("5_pu82k")
+
+[node name="GridMap4" type="GridMap" parent="Dungeon3" unique_id=192787596]
+mesh_library = ExtResource("6_gonat")
+
+[node name="GridMap5" type="GridMap" parent="Dungeon3" unique_id=1255113098]
+mesh_library = ExtResource("7_8j1rg")
+
+[node name="Dungeon2" type="Node3D" parent="." unique_id=1260655394]
+visible = false
+
+[node name="GridMap" type="GridMap" parent="Dungeon2" unique_id=1018179500]
+mesh_library = ExtResource("8_ea2dn")
+data = {
+"cells": PackedInt32Array(65525, 65534, 1441820)
+}
+
+[node name="template-floor-detail2" parent="." unique_id=1436511148 instance=ExtResource("9_qqgcv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8315334, 3.798477)
+
+[node name="Pickup" type="Node3D" parent="." unique_id=2005677519]
+
+[node name="TestPickup" parent="Pickup" unique_id=147555277 instance=ExtResource("10_pu82k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8526461, -3.9126947)
+
+[node name="Cont_Barrel_Pickup" parent="Pickup" unique_id=1497049862 instance=ExtResource("11_gonat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.573245)
+
+[node name="Cont_Box_Pickup" parent="Pickup" unique_id=1825611689 instance=ExtResource("12_8j1rg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.688198, 0, 2.3824606)
+
+[node name="triangle_pickup" parent="Pickup" unique_id=170006300 instance=ExtResource("13_tpiaa")]
+
+[node name="rectangle_pickup" parent="Pickup" unique_id=1772605930 instance=ExtResource("14_irc2a")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.3616405, 1.0359855, -2.9404464)

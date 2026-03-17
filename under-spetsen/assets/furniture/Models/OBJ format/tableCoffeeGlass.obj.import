@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ci3qun43sgugx"
+path="res://.godot/imported/tableCoffeeGlass.obj-48fd7bfe5da43a5fa34447e7e994475e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tableCoffeeGlass.obj-48fd7bfe5da43a5fa34447e7e994475e.mesh"]
+
+source_file="res://assets/furniture/Models/OBJ format/tableCoffeeGlass.obj"
+dest_files=["res://.godot/imported/tableCoffeeGlass.obj-48fd7bfe5da43a5fa34447e7e994475e.mesh", "res://.godot/imported/tableCoffeeGlass.obj-48fd7bfe5da43a5fa34447e7e994475e.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

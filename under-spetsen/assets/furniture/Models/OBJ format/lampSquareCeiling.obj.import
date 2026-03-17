@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b5tpyucjfshtx"
+path="res://.godot/imported/lampSquareCeiling.obj-4494d15a68d132271e991fd410ed3dbc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lampSquareCeiling.obj-4494d15a68d132271e991fd410ed3dbc.mesh"]
+
+source_file="res://assets/furniture/Models/OBJ format/lampSquareCeiling.obj"
+dest_files=["res://.godot/imported/lampSquareCeiling.obj-4494d15a68d132271e991fd410ed3dbc.mesh", "res://.godot/imported/lampSquareCeiling.obj-4494d15a68d132271e991fd410ed3dbc.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
