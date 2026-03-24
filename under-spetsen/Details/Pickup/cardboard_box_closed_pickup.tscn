@@ -76,6 +76,7 @@ shadow_mesh = SubResource("ArrayMesh_6qjfg")
 size = Vector3(0.20721436, 0.21623993, 0.2083435)
 
 [node name="cardboardBoxClosed" type="RigidBody3D" unique_id=1307828168]
+collision_mask = 3
 script = SubResource("GDScript_wwme4")
 
 [node name="cardboardBoxClosed" type="MeshInstance3D" parent="." unique_id=1619025661]

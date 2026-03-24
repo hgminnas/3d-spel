@@ -100,6 +100,11 @@ cache/0/31/0/underline_position = 0.0
 cache/0/31/0/underline_thickness = 0.0
 cache/0/31/0/scale = 1.0
 
+[sub_resource type="LabelSettings" id="LabelSettings_4ntmi"]
+font_size = 80
+shadow_size = 4
+shadow_color = Color(0.23633423, 0.23633423, 0.2363342, 0)
+
 [node name="Player" type="CharacterBody3D" unique_id=1612772408]
 floor_max_angle = 1.134464
 script = ExtResource("1_l8h54")
@@ -125,8 +130,8 @@ collide_with_areas = true
 [node name="Crosshair" type="Control" parent="Head" unique_id=2054530488]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 1920.0
+offset_bottom = 1200.0
 
 [node name="Label" type="Label" parent="Head/Crosshair" unique_id=920562776]
 layout_mode = 1
@@ -147,3 +152,28 @@ theme_override_font_sizes/font_size = 31
 text = "+"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="HideCanvas" type="CanvasLayer" parent="Head" unique_id=2087656617]
+
+[node name="HideScreen" type="ColorRect" parent="Head/HideCanvas" unique_id=1637782387]
+offset_right = 1920.0
+offset_bottom = 1200.0
+color = Color(0.080783345, 0.080783345, 0.080783345, 1)
+
+[node name="Label" type="Label" parent="Head/HideCanvas/HideScreen" unique_id=415497547]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.5
+offset_top = -55.0
+offset_right = 125.5
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Schh..."
+label_settings = SubResource("LabelSettings_4ntmi")
+
+[connection signal="player_hidden_status_update" from="Head" to="." method="_on_head_player_hidden_status_update"]

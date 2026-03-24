@@ -26,7 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://cg4p53t3qnu5a" path="res://assets/A sci fi/sci-fi-like Asset/scenes/Props/cont_box_static.tscn" id="23_4rrab"]
 [ext_resource type="PackedScene" uid="uid://dpjyjalsq2xow" path="res://assets/A sci fi/sci-fi-like Asset/scenes/Props/cont_chest.tscn" id="24_pklkh"]
 [ext_resource type="PackedScene" uid="uid://dy6fscmvgb6gx" path="res://assets/A sci fi/sci-fi-like Asset/scenes/Props/cont_chest_static.tscn" id="25_l46x7"]
-[ext_resource type="PackedScene" uid="uid://donwqj0xol8yg" path="res://assets/A sci fi/sci-fi-like Asset/scenes/Doors/door_frame_card.tscn" id="26_xprrq"]
+[ext_resource type="PackedScene" uid="uid://donwqj0xol8yg" path="res://assets/A sci fi/sci-fi-like Asset/scenes/Doors/door_frame.tscn" id="26_xprrq"]
 [ext_resource type="PackedScene" uid="uid://bueiu6e3et5of" path="res://assets/A sci fi/sci-fi-like Asset/scenes/Doors/door_hallway.tscn" id="27_73vi6"]
 [ext_resource type="PackedScene" uid="uid://w8sc08sis044" path="res://assets/A sci fi/sci-fi-like Asset/scenes/Props/cont_display_case_1.tscn" id="28_fkp7e"]
 [ext_resource type="PackedScene" uid="uid://pgibo5kjytl5" path="res://assets/A sci fi/sci-fi-like Asset/scenes/Stickers/stickers_9.tscn" id="30_0tgvk"]

@@ -6,3 +6,4 @@ func _ready() -> void:
 func enableCard():
 	freeze = false
 	$SpotLight3D.visible = false
+	$OmniLight3D.visible = false

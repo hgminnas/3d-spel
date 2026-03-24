@@ -1,8 +1,10 @@
 extends CharacterBody3D
 
+signal player_hidden_status_update(is_hidden: bool)
+
 const SPEED = 4.0
-const JUMP_VELOCITY = 6.5
-const ACCELERATION = 1.76
+var JUMP_VELOCITY = 6.5
+var ACCELERATION = 1.76
 const DECELERATION = 10
 
 
@@ -26,3 +28,11 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED * delta * DECELERATION)
 		
 	move_and_slide()
+
+
+func _on_danger_controller_state_changed(new_state: Variant) -> void:
+	print("Updated state", new_state)
+	$Head.maze_hiding_state = new_state
+
+func _on_head_player_hidden_status_update(is_hidden: Variant) -> void:
+	emit_signal("player_hidden_status_update", is_hidden)

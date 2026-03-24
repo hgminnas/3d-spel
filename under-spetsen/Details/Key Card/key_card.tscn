@@ -58,4 +58,9 @@ mesh = SubResource("ArrayMesh_dqk3s")
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1802489845]
 transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, 1, 0, -1, 2.9802322e-08, 0, 1.5841856, 0)
 light_volumetric_fog_energy = 5.0
+light_size = 0.5
 spot_angle = 11.525593
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=605099691]
+light_size = 0.52
+omni_range = 0.9799377

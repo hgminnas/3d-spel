@@ -9,6 +9,7 @@ func _ready() -> void:
 	$KeyCard.visible = false
 	$KeyCard/CollisionShape3D.disabled = true
 	$KeyCard/SpotLight3D.visible = false
+	$KeyCard/OmniLight3D.visible = false
 	
 
 func _on_panel_light_tower_state(is_correct: bool) -> void:
@@ -42,6 +43,8 @@ func card_appear():
 	$KeyCard.visible = true
 	$KeyCard/CollisionShape3D.disabled = false
 	$KeyCard/SpotLight3D.visible = true
+	$KeyCard/OmniLight3D.visible = true
+	
 
 	
 	

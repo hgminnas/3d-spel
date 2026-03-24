@@ -1,9 +1,9 @@
-[gd_scene format=4 uid="uid://cfndj2rfba54i"]
+[gd_scene format=4 uid="uid://donwqj0xol8yg"]
 
 [ext_resource type="Material" uid="uid://dmijl1xag0bfa" path="res://assets/A sci fi/sci-fi-like Asset/materials/TilesMaterials/SingleDoor_mat.tres" id="1_4e58f"]
 [ext_resource type="Material" uid="uid://q8qbbdouiwvy" path="res://assets/A sci fi/sci-fi-like Asset/materials/TilesMaterials/PanelTrim_Mat.tres" id="2_bk5xv"]
 [ext_resource type="Material" uid="uid://cpeilnjoelfqd" path="res://assets/A sci fi/sci-fi-like Asset/materials/TilesMaterials/InstancedEmissionShader_Material.tres" id="3_gdryy"]
-[ext_resource type="Script" uid="uid://hoqtsueer7vt" path="res://assets/A sci fi/sci-fi-like Asset/scenes/Doors/door_frame_card.gd" id="3_m1x34"]
+[ext_resource type="Script" uid="uid://hoqtsueer7vt" path="res://assets/A sci fi/sci-fi-like Asset/scenes/Doors/door_frame.gd" id="3_m1x34"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_jubpq"]
 _surfaces = [{
