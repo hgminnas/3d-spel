@@ -68,9 +68,16 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_y0ior")
 
-[node name="televisionModern" type="Node3D" unique_id=1819837438]
+[sub_resource type="BoxShape3D" id="BoxShape3D_n62jf"]
+size = Vector3(0.7067871, 0.4720459, 0.08276367)
+
+[node name="televisionModern" type="StaticBody3D" unique_id=507975423]
 
 [node name="televisionModern" type="MeshInstance3D" parent="." unique_id=1649825333]
 mesh = SubResource("ArrayMesh_oycjn")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=806973401]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1334733425]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0032958984, 0.23162842, -0.0040283203)
+shape = SubResource("BoxShape3D_n62jf")

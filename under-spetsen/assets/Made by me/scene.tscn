@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cn3tjagyr0nu3"]
+
+[ext_resource type="Material" uid="uid://bdjqu6jpu2gvu" path="res://assets/A sci fi/sci-fi-like Asset/PropMaterials/CrowBar_Mat.tres" id="1_uf2fu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i1ela"]
+size = Vector3(15.39151, 1, 10.111816)
+
+[sub_resource type="BoxMesh" id="BoxMesh_yl60r"]
+material = ExtResource("1_uf2fu")
+size = Vector3(15, 1, 10)
+
+[node name="Scene" type="StaticBody3D" unique_id=1460061265]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=266927845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.095687866, 0, -0.111083984)
+shape = SubResource("BoxShape3D_i1ela")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2059125204]
+mesh = SubResource("BoxMesh_yl60r")

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://lqridhqvkqfg"]
+
+[ext_resource type="ArrayMesh" uid="uid://dbn8dapt5h6yj" path="res://assets/furniture/Models/OBJ format/kitchenFridge.obj" id="1_p52n5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_frllf"]
+size = Vector3(0.6628418, 1.406311, 0.46411133)
+
+[node name="fridge_hider" type="StaticBody3D" unique_id=615230814 groups=["hider"]]
+collision_layer = 3
+collision_mask = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1581110833]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+mesh = ExtResource("1_p52n5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=498244480]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3223877, 0.68270874, 0.20690918)
+shape = SubResource("BoxShape3D_frllf")

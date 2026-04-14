@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://d1kbl2psl1ctn"]
+
+[ext_resource type="FontFile" uid="uid://bwog6707swhwa" path="res://Fonts/horroroidbold.ttf" id="1_achke"]
+[ext_resource type="Script" uid="uid://cthfbcuy287l5" path="res://Lobby/PauseScreen/pause_menue.gd" id="1_dlann"]
+[ext_resource type="AudioStream" uid="uid://bxv6k80a78sig" path="res://Sounds/UI/kenney2/Audio/click_005.ogg" id="1_ugrbw"]
+
+[node name="PauseMenu" type="Control" unique_id=1206858926]
+process_mode = 2
+visible = false
+custom_minimum_size = Vector2(1920, 1200)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dlann")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1316290755]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5372549)
+
+[node name="clickSound" type="AudioStreamPlayer" parent="." unique_id=454265031]
+stream = ExtResource("1_ugrbw")
+
+[node name="Text" type="Control" parent="." unique_id=1715673958]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -573.0
+offset_top = 209.0
+offset_right = 570.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Spel pausat" type="Label" parent="Text" unique_id=1990917521]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -314.5
+offset_right = 314.5
+offset_bottom = 183.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_achke")
+theme_override_font_sizes/font_size = 160
+text = "Spel pausat"
+
+[node name="Btns" type="Control" parent="Text" unique_id=1794499430]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -481.25
+offset_top = -168.5
+offset_right = 481.25
+offset_bottom = 168.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Spela" type="Button" parent="Text/Btns" unique_id=1226176292]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -90.0
+offset_right = 415.0
+offset_bottom = 90.0
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("1_achke")
+theme_override_font_sizes/font_size = 150
+text = "Tillbaka"
+expand_icon = true
+
+[node name="Avsluta" type="Button" parent="Text/Btns" unique_id=1719064474]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -426.0
+offset_top = -90.0
+offset_bottom = 90.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("1_achke")
+theme_override_font_sizes/font_size = 150
+text = "Avsluta"
+expand_icon = true
+
+[connection signal="pressed" from="Text/Btns/Spela" to="." method="_on_spela_pressed"]
+[connection signal="pressed" from="Text/Btns/Avsluta" to="." method="_on_avsluta_pressed"]

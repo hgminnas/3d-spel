@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dc2auf2qbqcqk"
+path="res://.godot/imported/kom tillbaka.mp3-928a8f4a8568eca49f1e38aeb0402164.mp3str"
+
+[deps]
+
+source_file="res://Voice/Lars/kom tillbaka.mp3"
+dest_files=["res://.godot/imported/kom tillbaka.mp3-928a8f4a8568eca49f1e38aeb0402164.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

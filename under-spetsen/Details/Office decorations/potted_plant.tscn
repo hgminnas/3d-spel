@@ -109,7 +109,11 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_thbb6")
 
-[node name="pottedPlant" type="Node3D" unique_id=577013382]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_87qac"]
+height = 0.66503906
+radius = 0.111328125
+
+[node name="pottedPlant" type="StaticBody3D" unique_id=1545296034]
 
 [node name="pottedPlant" type="MeshInstance3D" parent="." unique_id=1761433329]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
@@ -120,3 +124,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10603, 0.11824, -0.120731)
 mesh = SubResource("ArrayMesh_23dhx")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=592760703]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1992802345]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.32177734, 0)
+shape = SubResource("CylinderShape3D_87qac")

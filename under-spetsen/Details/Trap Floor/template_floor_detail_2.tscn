@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://1ctnlsfrd53" path="res://assets/dungeon/Models/GLB format/Textures/colormap.png" id="3_pr6tc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8bfl0"]
-size = Vector3(31.985352, 4.64649, 7.91687)
+size = Vector3(28.168762, 4.64649, 7.91687)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7h4ql"]
 resource_name = "colormap"
@@ -118,7 +118,7 @@ mesh = SubResource("ArrayMesh_vtnch")
 [node name="Area3D" type="Area3D" parent="." index="3" unique_id=820531108]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=1700762397]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.004883, 2.3270059, 1.9486694)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.616486, 2.3270059, 1.9486694)
 shape = SubResource("BoxShape3D_8bfl0")
 
 [node name="CollisionTimer" type="Timer" parent="." index="4" unique_id=1537323720]

@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://bsxkdjt438lmr"]
+
+[ext_resource type="Script" uid="uid://doek3uiud8adf" path="res://Map/hallway.gd" id="1_hcm1d"]
+[ext_resource type="MeshLibrary" uid="uid://d0kh00ywmpydi" path="res://assets/A sci fi/sci-fi-like Asset/scenes/GridMaps/Walls.tres" id="1_uydlk"]
+[ext_resource type="MeshLibrary" uid="uid://vxyw47ulyu6b" path="res://assets/A sci fi/sci-fi-like Asset/scenes/GridMaps/Rooms.tres" id="2_hcm1d"]
+[ext_resource type="AudioStream" uid="uid://b6j5sx8huteax" path="res://Voice/Jonas/Jonas bestraffning på gräsmattan.MP3" id="4_3l8ap"]
+[ext_resource type="AudioStream" uid="uid://cdq5wml5d3c77" path="res://Voice/Lars/LarsHuntHallway.MP3" id="5_jjmau"]
+[ext_resource type="PackedScene" uid="uid://bt2c1phmcb7uw" path="res://assets/A sci fi/sci-fi-like Asset/scenes/Stickers/stickers_exit.tscn" id="6_861vr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0hscv"]
+size = Vector3(8, 9, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3l8ap"]
+size = Vector3(9, 8, 1)
+
+[node name="Hallway" type="Node3D" unique_id=1624800054]
+script = ExtResource("1_hcm1d")
+
+[node name="Walls" type="GridMap" parent="." unique_id=2084166431]
+mesh_library = ExtResource("1_uydlk")
+data = {
+"cells": PackedInt32Array(1, 65534, 0, 1, 65531, 655360, 1, 65528, 655360, 1, 65525, 655360, 1, 65522, 655360, 1, 65519, 655360, 1, 65516, 655360, 1, 65513, 655360, 1, 65510, 655360, 1, 65507, 655360, 1, 65504, 655360, 1, 65501, 655360, 1, 65498, 655360, 1, 65495, 655360, 1, 65492, 655360, 1, 65489, 655360, 1, 65486, 655360, 1, 65483, 655360, 1, 65480, 655360)
+}
+
+[node name="Room" type="GridMap" parent="." unique_id=1832328678]
+mesh_library = ExtResource("2_hcm1d")
+data = {
+"cells": PackedInt32Array(1, 65534, 1441795, 1, 65531, 1048579, 1, 65528, 1048579, 1, 65525, 1048579, 1, 65522, 1048579, 1, 65519, 1048579, 1, 65516, 1048579, 1, 65513, 1048579, 1, 65510, 1048579, 1, 65507, 1048579, 1, 65504, 1048579, 1, 65501, 1048579, 1, 65498, 1048579, 1, 65495, 1048579, 1, 65492, 1048579, 1, 65489, 1048579, 1, 65486, 1048579, 1, 65483, 1048579, 1, 65480, 1048579)
+}
+
+[node name="KillingArea" type="Area3D" parent="." unique_id=1294727718]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -89)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KillingArea" unique_id=385284419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 4, 0)
+shape = SubResource("BoxShape3D_0hscv")
+
+[node name="Start" type="Area3D" parent="." unique_id=1503064989]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Start" unique_id=1706966958]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3.5, 0)
+shape = SubResource("BoxShape3D_3l8ap")
+
+[node name="ToDeadScreen" type="Timer" parent="." unique_id=17205921]
+wait_time = 36.0
+
+[node name="DeadVoice" type="AudioStreamPlayer" parent="." unique_id=653593790]
+process_mode = 1
+stream = ExtResource("4_3l8ap")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="DeadVoice" unique_id=143597922]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.642539, 4.328677, -95.77999)
+light_color = Color(0.37254903, 0.078431375, 0.047058824, 1)
+light_energy = 16.0
+light_indirect_energy = 2.645
+light_volumetric_fog_energy = 11.916
+light_size = 0.523
+light_specular = 5.615
+
+[node name="BlackScreen" type="Control" parent="." unique_id=271979176]
+visible = false
+custom_minimum_size = Vector2(1920, 1200)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="BlackScreen" unique_id=1557666776]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ToGetCaught" type="Timer" parent="." unique_id=399115551]
+wait_time = 18.1
+
+[node name="HuntingYou" type="AudioStreamPlayer" parent="." unique_id=1196218907]
+stream = ExtResource("5_jjmau")
+parameters/looping = true
+
+[node name="Stickers_Exit" parent="." unique_id=699727972 instance=ExtResource("6_861vr")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 3, 4, -99.17827)
+
+[connection signal="body_entered" from="KillingArea" to="." method="_on_killing_area_body_entered"]
+[connection signal="body_entered" from="Start" to="." method="_on_start_body_entered"]
+[connection signal="timeout" from="ToDeadScreen" to="." method="_on_to_dead_screen_timeout"]
+[connection signal="finished" from="DeadVoice" to="." method="_on_to_dead_screen_timeout"]
+[connection signal="timeout" from="ToGetCaught" to="." method="_on_to_get_caught_timeout"]

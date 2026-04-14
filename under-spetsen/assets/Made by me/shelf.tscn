@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cthoycu4m0a4l"]
+
+[ext_resource type="ArrayMesh" uid="uid://cpnslduk48awt" path="res://assets/market/Models/OBJ format/shelf-end.obj" id="1_6upvc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fqdjj"]
+size = Vector3(1.199585, 1.5835571, 0.5994873)
+
+[node name="shelf" type="StaticBody3D" unique_id=646114238]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1796556349]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.002746582, 0.78842163, -0.30352783)
+shape = SubResource("BoxShape3D_fqdjj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1333945197]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+mesh = ExtResource("1_6upvc")

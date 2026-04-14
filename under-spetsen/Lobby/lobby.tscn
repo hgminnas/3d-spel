@@ -1,34 +1,300 @@
 [gd_scene format=3 uid="uid://dxoqiingal3ye"]
 
+[ext_resource type="Script" uid="uid://c6vrrl5kivqsh" path="res://Lobby/lobby.gd" id="1_0i6ks"]
 [ext_resource type="Texture2D" uid="uid://d4dm1emwkfgcs" path="res://Lobby/OIP.webp" id="1_1qw4d"]
 [ext_resource type="FontFile" uid="uid://cm7ogme307w2x" path="res://Fonts/horroroidstag.ttf" id="2_k4in3"]
+[ext_resource type="Texture2D" uid="uid://bs22j8h2m0rmm" path="res://Lobby/f4bebd4ed8cc2fa3ba0800d46da51830.jpg" id="2_kd8pr"]
+[ext_resource type="FontFile" uid="uid://bwog6707swhwa" path="res://Fonts/horroroidbold.ttf" id="4_ib2es"]
+[ext_resource type="FontFile" uid="uid://c001w1f5iehjn" path="res://Fonts/horroroidcond.ttf" id="6_5c4r2"]
+[ext_resource type="AudioStream" uid="uid://bxv6k80a78sig" path="res://Sounds/UI/kenney2/Audio/click_005.ogg" id="6_143m4"]
+[ext_resource type="AudioStream" uid="uid://hp5bwcxevlad" path="res://Sounds/Track/everything_is_dead-scary-horror-background-506557.mp3" id="7_5c4r2"]
+[ext_resource type="VideoStream" uid="uid://bccpqhn0uif0e" path="res://Backstory/backstory.ogv" id="8_dn8eh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kd8pr"]
 font = ExtResource("2_k4in3")
-font_size = 154
+font_size = 200
+outline_size = 4
+shadow_size = 9
+shadow_color = Color(0, 0, 0, 1)
 
 [node name="Lobby" type="Node3D" unique_id=498789247]
+script = ExtResource("1_0i6ks")
 
-[node name="Control" type="Control" parent="." unique_id=784929796]
+[node name="Lobby" type="Control" parent="." unique_id=784929796]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1200.0
 
-[node name="Oip" type="Sprite2D" parent="Control" unique_id=1732662294]
+[node name="Oip" type="Sprite2D" parent="Lobby" unique_id=1732662294]
+visible = false
 position = Vector2(1066, 598)
 scale = Vector2(4.5, 4.694)
 texture = ExtResource("1_1qw4d")
 
-[node name="Label" type="Label" parent="Control" unique_id=756306253]
+[node name="Sprite2D" type="Sprite2D" parent="Lobby" unique_id=1975328023]
+position = Vector2(1065.5001, 610)
+scale = Vector2(1.7775002, 1.6293334)
+texture = ExtResource("2_kd8pr")
+
+[node name="Text" type="Control" parent="Lobby" unique_id=1894179576]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -214.0
+offset_bottom = 469.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Lobby/Text" unique_id=756306253]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -911.0
-offset_top = 159.0
-offset_right = -126.0
-offset_bottom = 351.0
+offset_left = -419.5
+offset_right = 419.5
+offset_bottom = 192.0
 grow_horizontal = 2
 text = "Under Spetsen"
 label_settings = SubResource("LabelSettings_kd8pr")
+
+[node name="Control" type="Control" parent="Lobby/Text" unique_id=2078347150]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -458.5
+offset_top = -387.0
+offset_right = 458.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Buttons" type="Control" parent="Lobby/Text/Control" unique_id=1854570848]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -431.75
+offset_right = 431.75
+offset_bottom = 380.0
+grow_horizontal = 2
+
+[node name="Spela" type="Button" parent="Lobby/Text/Control/Buttons" unique_id=1475571622]
+layout_mode = 1
+offset_right = 386.0
+offset_bottom = 180.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_ib2es")
+theme_override_font_sizes/font_size = 150
+text = "Spela"
+expand_icon = true
+
+[node name="Avsluta" type="Button" parent="Lobby/Text/Control/Buttons" unique_id=1270875532]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -426.0
+offset_bottom = 180.0
+grow_horizontal = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_ib2es")
+theme_override_font_sizes/font_size = 150
+text = "Avsluta"
+expand_icon = true
+
+[node name="Kontroller" type="Button" parent="Lobby/Text/Control/Buttons" unique_id=570867236]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -140.0
+offset_right = 390.0
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_ib2es")
+theme_override_font_sizes/font_size = 100
+text = "Kontroller"
+expand_icon = true
+
+[node name="Backstory" type="Button" parent="Lobby/Text/Control/Buttons" unique_id=1284015816]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -390.0
+offset_top = -140.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_ib2es")
+theme_override_font_sizes/font_size = 100
+text = "Backstory"
+expand_icon = true
+
+[node name="clickSound" type="AudioStreamPlayer" parent="Lobby/Text" unique_id=1964662437]
+stream = ExtResource("6_143m4")
+
+[node name="Kontroller" type="Control" parent="Lobby" unique_id=1421394226]
+visible = false
+custom_minimum_size = Vector2(1920, 1200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -400.0
+offset_right = 500.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Lobby/Kontroller" unique_id=1217077967]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.8745098)
+
+[node name="Text" type="Control" parent="Lobby/Kontroller" unique_id=1944220370]
+custom_minimum_size = Vector2(1000, 1000)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -500.0
+offset_right = 500.0
+offset_bottom = 549.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FaktiskaKontrollerna" type="Label" parent="Lobby/Kontroller/Text" unique_id=1999245181]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -461.0
+offset_top = -848.0
+offset_right = 461.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("6_5c4r2")
+theme_override_font_sizes/font_size = 80
+text = "W - fram
+A - vänster
+S - bakåt
+D - höger
+E - ta upp objekt  -  (endast vissa kan tas upp)
+Q - gömma sig       -  (kan endast göras i objekt som det
+                            ser ut att man kan gömma sig i)"
+
+[node name="Kontroller" type="Label" parent="Lobby/Kontroller/Text" unique_id=2068612283]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -268.5
+offset_right = 268.5
+offset_bottom = 172.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_ib2es")
+theme_override_font_sizes/font_size = 150
+text = "Kontroller"
+
+[node name="Tillbaka" type="Button" parent="Lobby/Kontroller" unique_id=1063018451]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -415.0
+offset_top = -180.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_ib2es")
+theme_override_font_sizes/font_size = 100
+text = "Tillbaka"
+expand_icon = true
+
+[node name="Backstory Control" type="Control" parent="Lobby" unique_id=574751021]
+visible = false
+custom_minimum_size = Vector2(1920, 1200)
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Lobby/Backstory Control" unique_id=1723039666]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Backstory" type="VideoStreamPlayer" parent="Lobby/Backstory Control" unique_id=689411607]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("8_dn8eh")
+
+[node name="Tillbaka" type="Button" parent="Lobby/Backstory Control" unique_id=1308580241]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -260.0
+offset_top = -205.0
+offset_right = -21.0
+offset_bottom = -84.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("6_5c4r2")
+theme_override_font_sizes/font_size = 100
+text = "Tillbaka"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1678603997]
+stream = ExtResource("7_5c4r2")
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="Lobby/Text/Control/Buttons/Spela" to="." method="_on_spela_pressed"]
+[connection signal="pressed" from="Lobby/Text/Control/Buttons/Avsluta" to="." method="_on_avsluta_pressed"]
+[connection signal="pressed" from="Lobby/Text/Control/Buttons/Kontroller" to="." method="_on_kontroller_pressed"]
+[connection signal="pressed" from="Lobby/Text/Control/Buttons/Backstory" to="." method="_on_backstory_pressed"]
+[connection signal="pressed" from="Lobby/Kontroller/Tillbaka" to="." method="_on_tillbaka_pressed"]
+[connection signal="pressed" from="Lobby/Backstory Control/Tillbaka" to="." method="_on_audio_stream_player_finished"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

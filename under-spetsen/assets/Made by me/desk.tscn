@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dr43xde8xuwxy"]
+
+[ext_resource type="ArrayMesh" uid="uid://btmaeom5lyeto" path="res://assets/furniture/Models/OBJ format/desk.obj" id="1_lt4ur"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_snoly"]
+size = Vector3(1.8352356, 1.0126953, 1.0259094)
+
+[node name="Desk" type="StaticBody3D" unique_id=1502558243]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2130001825]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
+mesh = ExtResource("1_lt4ur")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1541831550]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.89216614, 0.47802734, 0.4705658)
+shape = SubResource("BoxShape3D_snoly")

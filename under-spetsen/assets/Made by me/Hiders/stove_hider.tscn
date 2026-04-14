@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b0ig4q1wdg0nh"]
+
+[ext_resource type="ArrayMesh" uid="uid://ch2vg3q6vxh6x" path="res://assets/furniture/Models/OBJ format/kitchenStove.obj" id="1_prbx2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fu8et"]
+size = Vector3(0.67163086, 0.69641113, 0.69873047)
+
+[node name="stove_hider" type="StaticBody3D" unique_id=1781263766 groups=["hider"]]
+collision_layer = 3
+collision_mask = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1540436045]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+mesh = ExtResource("1_prbx2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1099726467]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3218994, 0.3397827, 0.3400879)
+shape = SubResource("BoxShape3D_fu8et")

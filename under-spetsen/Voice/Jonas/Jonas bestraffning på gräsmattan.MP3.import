@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b6j5sx8huteax"
+path="res://.godot/imported/Jonas bestraffning på gräsmattan.MP3-517034b6fa75b0ee8cc4daed35f3c7f6.mp3str"
+
+[deps]
+
+source_file="res://Voice/Jonas/Jonas bestraffning på gräsmattan.MP3"
+dest_files=["res://.godot/imported/Jonas bestraffning på gräsmattan.MP3-517034b6fa75b0ee8cc4daed35f3c7f6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

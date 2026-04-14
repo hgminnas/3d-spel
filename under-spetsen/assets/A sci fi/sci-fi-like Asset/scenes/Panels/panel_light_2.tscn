@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cii5tcivbjvfw" path="res://assets/A sci fi/sci-fi-like Asset/scenes/Panels/panel_light_2.gd" id="1_xn0ac"]
 [ext_resource type="ArrayMesh" uid="uid://dmgmslysww4q6" path="res://Details/Panel Light/Mesh/Panel_Light_Mesh.tres" id="2_cuncm"]
+[ext_resource type="AudioStream" uid="uid://dkqcyikoq6ap5" path="res://Sounds/Correct/mixkit-correct-answer-tone-2870.wav" id="3_cuncm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8h5yi"]
 size = Vector3(1.6906738, 1.7049866, 0.28668213)
@@ -81,14 +82,18 @@ shape = SubResource("BoxShape3D_ngbsq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0010681152, 0.0032958984, 3.8589096)
 shape = SubResource("BoxShape3D_1g2id")
 
+[node name="Correct" type="AudioStreamPlayer3D" parent="." unique_id=1566440258]
+stream = ExtResource("3_cuncm")
+volume_db = -5.0
+
 [connection signal="body_entered" from="Order/1_Barrel" to="." method="_on__cube_body_entered"]
 [connection signal="body_entered" from="Order/1_Barrel" to="." method="_on__barrel_body_entered"]
-[connection signal="body_exited" from="Order/1_Barrel" to="." method="_on__barrel_body_exited"]
 [connection signal="body_exited" from="Order/1_Barrel" to="." method="_on__cube_body_exited"]
-[connection signal="body_entered" from="Order/2_rectangle" to="." method="_on__rectangle_body_entered"]
+[connection signal="body_exited" from="Order/1_Barrel" to="." method="_on__barrel_body_exited"]
 [connection signal="body_entered" from="Order/2_rectangle" to="." method="_on__triangle_body_entered"]
-[connection signal="body_exited" from="Order/2_rectangle" to="." method="_on__triangle_body_exited"]
+[connection signal="body_entered" from="Order/2_rectangle" to="." method="_on__rectangle_body_entered"]
 [connection signal="body_exited" from="Order/2_rectangle" to="." method="_on__rectangle_body_exited"]
+[connection signal="body_exited" from="Order/2_rectangle" to="." method="_on__triangle_body_exited"]
 [connection signal="body_entered" from="Order/3_cube" to="." method="_on__cube_body_entered"]
 [connection signal="body_entered" from="Order/3_cube" to="." method="_on__rectangle_body_entered"]
 [connection signal="body_exited" from="Order/3_cube" to="." method="_on__cube_body_exited"]

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://hmwcdoeds5xk"]
+
+[ext_resource type="ArrayMesh" uid="uid://02ebjtuh3dey" path="res://assets/furniture/Models/OBJ format/bookcaseOpen.obj" id="1_lrkh3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_txfdu"]
+size = Vector3(0.6119385, 1.3270264, 0.39770508)
+
+[node name="bookCaseOpen" type="StaticBody3D" unique_id=1090467757]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=777868216]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+mesh = ExtResource("1_lrkh3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1170767393]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3024292, 0.6557007, 0.19128418)
+shape = SubResource("BoxShape3D_txfdu")

@@ -29,6 +29,10 @@ func _physics_process(delta: float) -> void:
 		
 	move_and_slide()
 
+func _can_not_move():
+	ACCELERATION = 0
+	JUMP_VELOCITY = 0
+
 
 func _on_danger_controller_state_changed(new_state: Variant) -> void:
 	print("Updated state", new_state)
@@ -36,3 +40,8 @@ func _on_danger_controller_state_changed(new_state: Variant) -> void:
 
 func _on_head_player_hidden_status_update(is_hidden: Variant) -> void:
 	emit_signal("player_hidden_status_update", is_hidden)
+
+
+func _on_hallway_can_not_move(if_move: bool) -> void:
+	if if_move:
+		_can_not_move()

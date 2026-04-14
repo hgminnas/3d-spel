@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ciigj5eoe23cm"
+path="res://.godot/imported/freesound_community-breath-stinger1-96164.mp3-726f2af726d4af7ed7e644808cdae3d2.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Maze - RoomSounds/freesound_community-breath-stinger1-96164.mp3"
+dest_files=["res://.godot/imported/freesound_community-breath-stinger1-96164.mp3-726f2af726d4af7ed7e644808cdae3d2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

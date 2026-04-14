@@ -12,11 +12,23 @@ func _process(delta):
 
 
 func _on_area_3d_body_entered(body):
-	if body is CharacterBody3D:
-		animation.play("Open")
+	#if body is CharacterBody3D:
+		#animation.play("Open")
+	null
 
 
 
 func _on_area_3d_body_exited(body):
-	if body is CharacterBody3D:
-		animation.play_backwards("Open")
+	#if body is CharacterBody3D:
+		#animation.play_backwards("Open")
+	null
+
+
+func _on_panel_keypad_correct_code(is_correct: bool) -> void:
+	if is_correct:
+		$"Open Close Sound".play()
+		animation.play("Open")
+		$StaticBody3D/CollisionShape3D.disabled = true
+	else:	
+		$StaticBody3D/CollisionShape3D.disabled = false
+		

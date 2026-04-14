@@ -68,9 +68,16 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_53fkg")
 
-[node name="speaker" type="Node3D" unique_id=829156726]
+[sub_resource type="BoxShape3D" id="BoxShape3D_pk653"]
+size = Vector3(0.17578125, 0.68395996, 0.17016602)
+
+[node name="speaker" type="StaticBody3D" unique_id=1034444335]
 
 [node name="speaker" type="MeshInstance3D" parent="." unique_id=154657176]
 mesh = SubResource("ArrayMesh_74mm3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=189566315]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=807474975]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0703125, 0.30438232, 0.079711914)
+shape = SubResource("BoxShape3D_pk653")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://jjmfyb08p51a"
+path="res://.godot/imported/jag såg dig gå in.mp3-1a0ecd22b5ceafc66c8cc1ecc9fad81e.mp3str"
+
+[deps]
+
+source_file="res://Voice/Lars/jag såg dig gå in.mp3"
+dest_files=["res://.godot/imported/jag såg dig gå in.mp3-1a0ecd22b5ceafc66c8cc1ecc9fad81e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

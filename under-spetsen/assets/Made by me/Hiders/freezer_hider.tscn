@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://nnbm65wbxlj5"]
+
+[ext_resource type="ArrayMesh" uid="uid://4guf74ddcuw5" path="res://assets/market/Models/OBJ format/freezer.obj" id="1_h1idm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lt2ni"]
+size = Vector3(0.82592773, 0.3753662, 0.6314697)
+
+[node name="Freezer_hider" type="StaticBody3D" unique_id=1695339122 groups=["hider"]]
+collision_layer = 3
+collision_mask = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=267634542]
+mesh = ExtResource("1_h1idm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=972308640]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008178711, 0.18048096, -0.0016479492)
+shape = SubResource("BoxShape3D_lt2ni")

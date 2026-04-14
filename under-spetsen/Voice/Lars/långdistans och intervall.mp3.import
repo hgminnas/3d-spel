@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cg3kwb1kmg4oj"
+path="res://.godot/imported/långdistans och intervall.mp3-32656fbfa2cc1c18761abffdf5a27785.mp3str"
+
+[deps]
+
+source_file="res://Voice/Lars/långdistans och intervall.mp3"
+dest_files=["res://.godot/imported/långdistans och intervall.mp3-32656fbfa2cc1c18761abffdf5a27785.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

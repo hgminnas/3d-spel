@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dg2qyo6cc06os"
+path="res://.godot/imported/813653__wavewire__wooddoor_creak_04.wav-b421c5df30be49a1e6e38caf94cba9ba.sample"
+
+[deps]
+
+source_file="res://Sounds/Maze - RoomSounds/813653__wavewire__wooddoor_creak_04.wav"
+dest_files=["res://.godot/imported/813653__wavewire__wooddoor_creak_04.wav-b421c5df30be49a1e6e38caf94cba9ba.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

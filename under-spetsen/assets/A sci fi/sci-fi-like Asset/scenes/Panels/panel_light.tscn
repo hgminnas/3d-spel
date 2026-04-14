@@ -2,6 +2,7 @@
 
 [ext_resource type="ArrayMesh" uid="uid://dmgmslysww4q6" path="res://Details/Panel Light/Mesh/Panel_Light_Mesh.tres" id="1_4ofnu"]
 [ext_resource type="Script" uid="uid://b5eu1o527q74y" path="res://assets/A sci fi/sci-fi-like Asset/scenes/Panels/panel_light.gd" id="1_8h5yi"]
+[ext_resource type="AudioStream" uid="uid://dkqcyikoq6ap5" path="res://Sounds/Correct/mixkit-correct-answer-tone-2870.wav" id="3_kbcof"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8h5yi"]
 size = Vector3(1.6906738, 1.7049866, 0.28668213)
@@ -80,6 +81,10 @@ shape = SubResource("BoxShape3D_ngbsq")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Order/4_Barrel" unique_id=101476850]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0010681152, 0.0032958984, 3.8589096)
 shape = SubResource("BoxShape3D_1g2id")
+
+[node name="Correct" type="AudioStreamPlayer3D" parent="." unique_id=439419929]
+stream = ExtResource("3_kbcof")
+volume_db = -5.0
 
 [connection signal="body_entered" from="Order/1_Cube" to="." method="_on__cube_body_entered"]
 [connection signal="body_exited" from="Order/1_Cube" to="." method="_on__cube_body_exited"]

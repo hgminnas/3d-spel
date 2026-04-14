@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://uoh2hd8qx3e5" path="res://Player/player.gd" id="1_l8h54"]
 [ext_resource type="Script" uid="uid://b1drjckjd2u7t" path="res://Player/head.gd" id="2_4ntmi"]
+[ext_resource type="FontFile" uid="uid://dua7wlvknlckt" path="res://Fonts/horroroidlight.ttf" id="3_btcbx"]
+[ext_resource type="AudioStream" uid="uid://dweyfksrqioi3" path="res://Sounds/Hiding/freesound_community-closing-drawer-46789.mp3" id="4_gwnis"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hvfyp"]
 height = 2.5
@@ -101,11 +103,12 @@ cache/0/31/0/underline_thickness = 0.0
 cache/0/31/0/scale = 1.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_4ntmi"]
-font_size = 80
+font = ExtResource("3_btcbx")
+font_size = 119
 shadow_size = 4
 shadow_color = Color(0.23633423, 0.23633423, 0.2363342, 0)
 
-[node name="Player" type="CharacterBody3D" unique_id=1612772408]
+[node name="Player" type="CharacterBody3D" unique_id=1612772408 groups=["player"]]
 floor_max_angle = 1.134464
 script = ExtResource("1_l8h54")
 
@@ -175,5 +178,18 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Schh..."
 label_settings = SubResource("LabelSettings_4ntmi")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Head" unique_id=1900527040]
+light_color = Color(0.9649734, 0.934851, 1.0781288e-05, 1)
+light_energy = 6.542
+light_indirect_energy = 0.851
+light_volumetric_fog_energy = 1.894
+light_size = 0.168
+spot_range = 100.0
+spot_angle_attenuation = 0.7499998
+
+[node name="Hiding sound" type="AudioStreamPlayer3D" parent="Head" unique_id=1110619102]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8682047, 0)
+stream = ExtResource("4_gwnis")
 
 [connection signal="player_hidden_status_update" from="Head" to="." method="_on_head_player_hidden_status_update"]

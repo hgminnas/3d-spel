@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://0o03e6nkatbg"]
+
+[ext_resource type="ArrayMesh" uid="uid://bdb8drap4ycoe" path="res://assets/furniture/Models/OBJ format/kitchenCabinet.obj" id="1_kaf87"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5vchk"]
+size = Vector3(0.657959, 0.6945801, 0.69036865)
+
+[node name="kitchenCabinet_hider" type="StaticBody3D" unique_id=1555929452 groups=["hider"]]
+collision_layer = 3
+collision_mask = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1454013742]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+mesh = ExtResource("1_kaf87")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=693540640]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32092285, 0.33972168, 0.33828735)
+shape = SubResource("BoxShape3D_5vchk")

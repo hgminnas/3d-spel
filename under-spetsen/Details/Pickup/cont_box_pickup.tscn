@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://b3c7jwrwson8p"]
 
+[ext_resource type="Script" uid="uid://bvgirpmvm3qb0" path="res://Details/Pickup/cont_box_pickup.gd" id="1_w7js7"]
 [ext_resource type="ArrayMesh" uid="uid://dav8oyg60md8r" path="res://Details/Pickup/Meshes/Cont_Box_Picup_Meshh.tres" id="1_xanqn"]
+[ext_resource type="AudioStream" uid="uid://derdvpmy63jaq" path="res://Sounds/ObjectPutDown/kenney/Audio/impactTin_medium_004.ogg" id="2_it18f"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xanqn"]
 size = Vector3(0.8869171, 0.97628784, 0.88793945)
@@ -8,6 +10,7 @@ size = Vector3(0.8869171, 0.97628784, 0.88793945)
 [node name="Cont_Box_Pickup" type="RigidBody3D" unique_id=788858402 groups=["cube", "pickup"]]
 collision_layer = 3
 lock_rotation = true
+script = ExtResource("1_w7js7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1835345432]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0030593872, 0.49220276, -0.0010986328)
@@ -15,3 +18,6 @@ shape = SubResource("BoxShape3D_xanqn")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2072272998]
 mesh = ExtResource("1_xanqn")
+
+[node name="DropSound" type="AudioStreamPlayer3D" parent="." unique_id=1353954962]
+stream = ExtResource("2_it18f")

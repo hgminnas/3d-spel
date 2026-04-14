@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://blvnvc3wll028"]
+
+[ext_resource type="Script" uid="uid://bivdemsaj0yab" path="res://Lobby/DeadScreen/dead_screen.gd" id="1_h27s7"]
+[ext_resource type="FontFile" uid="uid://bwog6707swhwa" path="res://Fonts/horroroidbold.ttf" id="2_casbe"]
+[ext_resource type="AudioStream" uid="uid://5y3ljh5i731" path="res://Sounds/Death/Death sound.MP3" id="3_casbe"]
+
+[node name="DeadScreen" type="Node3D" unique_id=1714674032]
+script = ExtResource("1_h27s7")
+
+[node name="DeadScreen" type="Control" parent="." unique_id=1385579803]
+custom_minimum_size = Vector2(1920, 1200)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="DeadScreen" unique_id=795927178]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="DeadScreen" unique_id=1244842753]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.5
+offset_top = -91.5
+offset_right = 248.5
+offset_bottom = 91.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_casbe")
+theme_override_font_sizes/font_size = 160
+text = "you died..."
+
+[node name="ToTextArrive" type="Timer" parent="DeadScreen" unique_id=1930239716]
+wait_time = 3.6999999999999997
+one_shot = true
+
+[node name="ToBackToLobby" type="Timer" parent="DeadScreen" unique_id=1319944404]
+wait_time = 8.0
+one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DeadScreen" unique_id=788221685]
+stream = ExtResource("3_casbe")
+autoplay = true
+
+[connection signal="timeout" from="DeadScreen/ToTextArrive" to="." method="_on_to_text_arrive_timeout"]
+[connection signal="timeout" from="DeadScreen/ToBackToLobby" to="." method="_on_timer_timeout"]

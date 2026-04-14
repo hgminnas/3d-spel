@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dyxur7lvaa0w4"]
+
+[ext_resource type="ArrayMesh" uid="uid://cly8bphy5uums" path="res://assets/furniture/Models/OBJ format/cabinetBed.obj" id="1_g4s0h"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ym1b8"]
+size = Vector3(0.54119873, 0.47366333, 0.4176178)
+
+[node name="cabinetBed_hider" type="StaticBody3D" unique_id=1121600558 groups=["hider"]]
+collision_layer = 3
+collision_mask = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1072420366]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+mesh = ExtResource("1_g4s0h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=606607814]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24697876, 0.2320404, 0.20635223)
+shape = SubResource("BoxShape3D_ym1b8")

@@ -11,49 +11,68 @@
 [ext_resource type="PackedScene" uid="uid://b3c7jwrwson8p" path="res://Details/Pickup/cont_box_pickup.tscn" id="6_h2dxu"]
 [ext_resource type="PackedScene" uid="uid://ypo0wxpbqjxv" path="res://Details/Pickup/cont_barrel_pickup.tscn" id="7_tt5a7"]
 [ext_resource type="PackedScene" uid="uid://cbvo02v832lpb" path="res://assets/A sci fi/sci-fi-like Asset/scenes/Panels/panel_light.tscn" id="8_mie2w"]
-[ext_resource type="PackedScene" uid="uid://c8gs4skr77gsh" path="res://Player/player.tscn" id="9_ckrhi"]
 [ext_resource type="PackedScene" uid="uid://cqxp34fwb5ucn" path="res://assets/A sci fi/sci-fi-like Asset/scenes/Panels/panel_light_2.tscn" id="9_h2dxu"]
 [ext_resource type="Texture2D" uid="uid://dc4iy6330t1rw" path="res://Clues/Tower1_Room1.png" id="14_3k27h"]
 [ext_resource type="Texture2D" uid="uid://cw8de6a16b335" path="res://Clues/Word1_Room1.png" id="15_81uka"]
 [ext_resource type="Texture2D" uid="uid://btkarndqkci4s" path="res://Clues/Word2_Room1.png" id="16_wlpcc"]
 [ext_resource type="Texture2D" uid="uid://dac2umvi1iwgn" path="res://Clues/Word3_Room1.png" id="17_7vbjs"]
+[ext_resource type="AudioStream" uid="uid://c2bdjcyf0x51a" path="res://Sounds/Track/nikitakondrashev-horror-510643.mp3" id="18_3k27h"]
 [ext_resource type="Texture2D" uid="uid://ca2j8xivwac4q" path="res://Clues/Word4_Room1.png" id="18_lqap5"]
+[ext_resource type="Texture2D" uid="uid://b14kiidckdu1s" path="res://Clues/Ledtråd1_Room1.png" id="18_wlpcc"]
+[ext_resource type="Texture2D" uid="uid://bcmeenx11gqwq" path="res://Clues/Ledtråd2_Room1.png" id="19_7vbjs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ed2ot"]
 albedo_texture = ExtResource("14_3k27h")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_cy8mi"]
 material = SubResource("StandardMaterial3D_ed2ot")
+size = Vector2(1.8, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i3vrb"]
 albedo_texture = ExtResource("15_81uka")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_2mcon"]
 material = SubResource("StandardMaterial3D_i3vrb")
+size = Vector2(1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gb37q"]
 albedo_texture = ExtResource("16_wlpcc")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_a1dac"]
 material = SubResource("StandardMaterial3D_gb37q")
+size = Vector2(1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e8vgy"]
 albedo_texture = ExtResource("17_7vbjs")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_5pq7q"]
 material = SubResource("StandardMaterial3D_e8vgy")
+size = Vector2(1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ratl2"]
 albedo_texture = ExtResource("18_lqap5")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_g6hsj"]
 material = SubResource("StandardMaterial3D_ratl2")
+size = Vector2(1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lqap5"]
+albedo_texture = ExtResource("18_wlpcc")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ed2ot"]
+material = SubResource("StandardMaterial3D_lqap5")
+size = Vector2(1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2mcon"]
+albedo_texture = ExtResource("19_7vbjs")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_gb37q"]
+material = SubResource("StandardMaterial3D_2mcon")
+size = Vector2(1.8, 1.8)
 
 [node name="1_st room" type="Node3D" unique_id=1896714428]
+process_mode = 1
 script = ExtResource("1_tt5a7")
-
-[node name="Player" parent="." unique_id=1612772408 instance=ExtResource("9_ckrhi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.046166, -1.8167658)
 
 [node name="Panel_CardSlider" parent="." unique_id=68030248 instance=ExtResource("3_oi0rx")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2.6494908, 3.269792, -0.19110845)
@@ -82,31 +101,31 @@ data = {
 [node name="Pickups" type="Node3D" parent="." unique_id=484821585]
 
 [node name="triangle_pickup" parent="Pickups" unique_id=170006300 instance=ExtResource("4_fl76v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02994299, 3.035317, -7.528635)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.58726144, 1.785001, -7.528635)
 
 [node name="rectangle_pickup" parent="Pickups" unique_id=1772605930 instance=ExtResource("5_ckrhi")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.09736538, 2.8373795, -4.4634237)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.709898, 4.3345675, -3.8766236)
 
 [node name="Cont_Box_Pickup" parent="Pickups" unique_id=788858402 instance=ExtResource("6_h2dxu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2402711, 3.094009, -7.5102587)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45086205, 3.094009, -5.622262)
 
 [node name="Cont_Barrel_Pickup" parent="Pickups" unique_id=2004240638 instance=ExtResource("7_tt5a7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7409165, 2.3171487, -7.992486)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7409165, 2.3171487, -6.569064)
 
 [node name="Pickups2" type="Node3D" parent="." unique_id=1285011070]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.088245)
 
 [node name="triangle_pickup" parent="Pickups2" unique_id=185382625 instance=ExtResource("4_fl76v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3213785, 3.035317, -8.983585)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5213592, 2.9375634, -10.617517)
 
 [node name="rectangle_pickup" parent="Pickups2" unique_id=1763272639 instance=ExtResource("5_ckrhi")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.6342103, 2.8373795, -8.906504)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.6342103, 2.8373795, -6.912035)
 
 [node name="Cont_Box_Pickup" parent="Pickups2" unique_id=1349060644 instance=ExtResource("6_h2dxu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2634943, 3.094009, -7.2639294)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2613027, 4.3500857, -8.761238)
 
 [node name="Cont_Barrel_Pickup" parent="Pickups2" unique_id=1192720048 instance=ExtResource("7_tt5a7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5996742, 2.3171487, -9.399237)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7076128, 3.9074297, -9.61099)
 
 [node name="Panels" type="Node3D" parent="." unique_id=1125752595]
 
@@ -119,24 +138,38 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.37
 [node name="Clues" type="Node3D" parent="." unique_id=1007871232]
 
 [node name="Tower1" type="MeshInstance3D" parent="Clues" unique_id=2134425641]
-transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, -3.773817, 3.8557754, -6.2686834)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -2.3981748, 3.3055658, -11.767951)
 mesh = SubResource("PlaneMesh_cy8mi")
 
 [node name="Word1" type="MeshInstance3D" parent="Clues" unique_id=1597519091]
-transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, -8.742278e-08, 4.3711392e-08, -1, 1, -4.3711385e-08, -8.742278e-08, 1.798733, 3.9879885, -2.029356)
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, -8.742278e-08, 4.3711392e-08, -1, 1, -4.3711385e-08, -8.742278e-08, 1.7987332, 3.8200145, -10.682669)
 mesh = SubResource("PlaneMesh_2mcon")
 
 [node name="Word2" type="MeshInstance3D" parent="Clues" unique_id=1135970347]
-transform = Transform3D(-4.371139e-08, -1, -2.9802322e-08, 0, 2.9802322e-08, -1, 1, -4.371139e-08, -1.3027009e-15, 1.7790568, 4.650394, -4.3926673)
+transform = Transform3D(-4.371139e-08, -1, -2.9802322e-08, 0, 2.9802322e-08, -1, 1, -4.371139e-08, -1.3027009e-15, 1.7790568, 5.0157027, -10.668558)
 mesh = SubResource("PlaneMesh_a1dac")
 
 [node name="Word3" type="MeshInstance3D" parent="Clues" unique_id=832430492]
-transform = Transform3D(-4.371139e-08, -1, -2.9802322e-08, 0, 2.9802322e-08, -1, 1, -4.371139e-08, -1.3027009e-15, 1.7790568, 4.1025314, -6.669576)
+transform = Transform3D(1, -5.9604645e-08, -1.7763568e-15, 0, 2.9802322e-08, -1, 5.9604645e-08, 1, 2.9802322e-08, 0.8057637, 5.113748, -11.767954)
 mesh = SubResource("PlaneMesh_5pq7q")
 
 [node name="Word4" type="MeshInstance3D" parent="Clues" unique_id=1762479218]
-transform = Transform3D(-4.371139e-08, -1, -2.9802322e-08, 0, 2.9802322e-08, -1, 1, -4.371139e-08, -1.3027009e-15, 1.7790568, 4.4595814, -9.013767)
+transform = Transform3D(1.0000001, -2.9802322e-08, -8.881784e-16, 0, 2.9802322e-08, -1, 2.9802322e-08, 1.0000001, 2.9802326e-08, -0.29455042, 5.097491, -11.746525)
 mesh = SubResource("PlaneMesh_g6hsj")
+
+[node name="Ledtråd1" type="MeshInstance3D" parent="Clues" unique_id=680289204]
+transform = Transform3D(-1, 8.742278e-08, -3.821371e-15, 0, -4.371139e-08, -1, -8.742278e-08, -1, 4.371139e-08, -1.1032252, 4.993308, -0.22251153)
+mesh = SubResource("PlaneMesh_ed2ot")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Clues" unique_id=1435153730]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.3754865, 3.5769162, -11.793415)
+mesh = SubResource("PlaneMesh_gb37q")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1254438569]
+stream = ExtResource("18_3k27h")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
 
 [connection signal="tower_state" from="Panels/Panel_Light" to="." method="_on_panel_light_tower_state"]
 [connection signal="tower_state_2" from="Panels/Panel_Light_2" to="." method="_on_panel_light_2_tower_state_2"]

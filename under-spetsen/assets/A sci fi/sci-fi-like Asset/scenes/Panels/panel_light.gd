@@ -85,6 +85,7 @@ func light(set_state: bool):
 		$SpotLight3D.light_color = "00ff00" # Green
 		$MeshInstance3D.set_instance_shader_parameter("color", Color(0, 1, 0))
 		emit_signal("tower_state", set_state)
+		$Correct.play()
 	else:
 		$SpotLight3D.light_color = "ff0000" # Red
 		$MeshInstance3D.set_instance_shader_parameter("color", Color(0.694, 0.125, 0.0, 1.0))

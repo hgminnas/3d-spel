@@ -16,6 +16,9 @@
 [ext_resource type="Script" uid="uid://dasndwxras1wi" path="res://assets/A sci fi/sci-fi-like Asset/scenes/Panels/Buttons/enter.gd" id="14_peb6b"]
 [ext_resource type="Script" uid="uid://vmv15fhleiew" path="res://assets/A sci fi/sci-fi-like Asset/scenes/Panels/Buttons/0.gd" id="15_w3p1c"]
 [ext_resource type="Script" uid="uid://bgbojlydogj47" path="res://assets/A sci fi/sci-fi-like Asset/scenes/Panels/Buttons/back.gd" id="16_qf7qa"]
+[ext_resource type="AudioStream" uid="uid://cdsycuc0jkf5q" path="res://Sounds/UI/kenney2/Audio/click_003.ogg" id="17_dwj7a"]
+[ext_resource type="AudioStream" uid="uid://dkqcyikoq6ap5" path="res://Sounds/Correct/mixkit-correct-answer-tone-2870.wav" id="18_vby6s"]
+[ext_resource type="AudioStream" uid="uid://2sw6up5rgdti" path="res://Sounds/Wrong/mixkit-game-show-wrong-answer-buzz-950.wav" id="19_qykbc"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ks0od"]
 _surfaces = [{
@@ -200,6 +203,15 @@ script = ExtResource("16_qf7qa")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Buttons/back" unique_id=374874059]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06457952, -0.0721398, 0.04820489)
 shape = SubResource("BoxShape3D_gxemc")
+
+[node name="ButtonSound" type="AudioStreamPlayer3D" parent="." unique_id=404213363]
+stream = ExtResource("17_dwj7a")
+
+[node name="Correct" type="AudioStreamPlayer3D" parent="." unique_id=822182992]
+stream = ExtResource("18_vby6s")
+
+[node name="Wrong" type="AudioStreamPlayer3D" parent="." unique_id=798936968]
+stream = ExtResource("19_qykbc")
 
 [connection signal="input_event" from="Buttons/1" to="." method="_on__input_event"]
 [connection signal="input_event" from="Buttons/2" to="." method="_on__input_event"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5bu0iiqtixru"
+path="res://.godot/imported/Standardinspelning 5.mp3-39db2a06950417f1873cbffb13daa7f3.mp3str"
+
+[deps]
+
+source_file="res://Voice/Jonas/Standardinspelning 5.mp3"
+dest_files=["res://.godot/imported/Standardinspelning 5.mp3-39db2a06950417f1873cbffb13daa7f3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

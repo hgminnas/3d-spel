@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bswlf8srbtfcp"]
+
+[ext_resource type="ArrayMesh" uid="uid://b6weimfvt3gu5" path="res://assets/furniture/Models/OBJ format/washerDryerStacked.obj" id="1_0erfm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j6e82"]
+size = Vector3(0.60498047, 1.4297485, 0.6027832)
+
+[node name="washerDryer_hider" type="StaticBody3D" unique_id=824515637 groups=["hider"]]
+collision_layer = 3
+collision_mask = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1179851975]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+mesh = ExtResource("1_0erfm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2025375344]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29516602, 0.70877075, 0.23815918)
+shape = SubResource("BoxShape3D_j6e82")

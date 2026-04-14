@@ -78,6 +78,7 @@ func try_pickup():
 func drop_object():
 	if held_object:
 		held_object.gravity_scale = 1
+		held_object.apply_impulse(Vector3.ZERO, Vector3.DOWN * 2.0)
 		held_object = null
 
 
@@ -118,6 +119,7 @@ func player_hide():
 			hid = true
 			emit_signal("player_hidden_status_update", true)
 			#print("hid = true")
+			$"Hiding sound".play()
 
 
 func _physics_process(delta):

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://drn4rmcl1vnoe"]
+
+[ext_resource type="ArrayMesh" uid="uid://drneyrssiuui5" path="res://assets/furniture/Models/OBJ format/dryer.obj" id="1_apsh1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_na1pm"]
+size = Vector3(0.40429688, 0.47558594, 0.39056396)
+
+[node name="Dryer Hider" type="StaticBody3D" unique_id=1087548456 groups=["hider"]]
+collision_layer = 3
+collision_mask = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=931584520]
+mesh = ExtResource("1_apsh1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1896458348]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19335938, 0.22998047, 0.15811157)
+shape = SubResource("BoxShape3D_na1pm")

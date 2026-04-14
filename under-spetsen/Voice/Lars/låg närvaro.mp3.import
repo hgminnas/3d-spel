@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bfy6f8npqt4xo"
+path="res://.godot/imported/låg närvaro.mp3-177685126fe637541d685e2917b7ed78.mp3str"
+
+[deps]
+
+source_file="res://Voice/Lars/låg närvaro.mp3"
+dest_files=["res://.godot/imported/låg närvaro.mp3-177685126fe637541d685e2917b7ed78.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

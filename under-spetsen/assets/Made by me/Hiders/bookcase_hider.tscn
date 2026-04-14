@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://xa08ahw732pu"]
+
+[ext_resource type="ArrayMesh" uid="uid://b6cxbk7o1ytsn" path="res://assets/furniture/Models/OBJ format/bookcaseClosedWide.obj" id="1_ja0le"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iumru"]
+size = Vector3(0.8175049, 0.8039551, 0.2845459)
+
+[node name="bookcase_hider" type="StaticBody3D" unique_id=1659074380 groups=["hider"]]
+collision_layer = 3
+collision_mask = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1049626390]
+mesh = ExtResource("1_ja0le")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=113791808]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4003296, 0.38659668, 0.12030029)
+shape = SubResource("BoxShape3D_iumru")

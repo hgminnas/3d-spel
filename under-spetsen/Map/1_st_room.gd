@@ -44,6 +44,7 @@ func card_appear():
 	$KeyCard/CollisionShape3D.disabled = false
 	$KeyCard/SpotLight3D.visible = true
 	$KeyCard/OmniLight3D.visible = true
+	$AudioStreamPlayer.stop()
 	
 
 	

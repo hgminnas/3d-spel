@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://basheqcup72hx"]
+
+[ext_resource type="ArrayMesh" uid="uid://w78p1gq26sum" path="res://assets/furniture/Models/OBJ format/trashcan.obj" id="1_pjds7"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ik163"]
+height = 0.44329834
+radius = 0.111816406
+
+[node name="trashcan_hider" type="StaticBody3D" unique_id=1895371751 groups=["hider"]]
+collision_layer = 3
+collision_mask = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=894527972]
+mesh = ExtResource("1_pjds7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1407359575]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21194458, 0)
+shape = SubResource("CylinderShape3D_ik163")

@@ -14,9 +14,11 @@ func _process(delta):
 
 func _on_area_3d_body_entered(body):
 	if body.is_in_group("card"):
+		$"Open Close Sound".play()
 		animation.play("Open")
 
 
 func _on_area_3d_body_exited(body):
 	if body.is_in_group("card"):
+		$"Open Close Sound".play()
 		animation.play_backwards("Open")
