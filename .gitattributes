@@ -15,6 +15,7 @@
 *.mp4  filter=lfs diff=lfs merge=lfs -text
 *.mov  filter=lfs diff=lfs merge=lfs -text
 *.webm filter=lfs diff=lfs merge=lfs -text
+*.ogv filter=lfs diff=lfs merge=lfs -text
 *.glb  filter=lfs diff=lfs merge=lfs -text
 *.gltf filter=lfs diff=lfs merge=lfs -text
 *.fbx  filter=lfs diff=lfs merge=lfs -text
@@ -42,4 +43,3 @@ project.godot text eol=lf
 *.md   text eol=lf
 *.txt  text eol=lf
  
-*.ogv filter=lfs diff=lfs merge=lfs -text
